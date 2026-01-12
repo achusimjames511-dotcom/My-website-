@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>James Logan Gaming Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Gaming font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      background: url('https://wallpaperaccess.com/full/2155356.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.65);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff0055, #ff9900, #00ff99);
+      background-size: 1000px 100%;
+      padding: 25px;
+      text-align: center;
+      font-size: 6vw;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: rgba(17,17,17,0.85);
+      padding: 12px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 3.5vw;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ff0055; }
+
+    .games {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(28,28,28,0.85);
+      border: 2px solid #00ff99;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 230px;
+      padding: 15px 15px 60px 15px;
+      box-shadow: 0 0 15px #00ff9933;
+      transition: 0.3s;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      border-color: #ff0055;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff0055aa;
+    }
+
+    .card img.logo {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      z-index: 2;
+    }
+
+    /* Glow effect for COD soldier */
+    .card .glow {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle, #ff0055 0%, #00ff99 70%, transparent 90%);
+      z-index: 1;
+      filter: blur(20px);
+    }
+
+    .card img.soldier {
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      z-index: 2;
+      transition: transform 0.3s;
+    }
+    .card img.soldier:hover {
+      transform: scale(1.05);
+    }
+
+    /* COD name above glow */
+    .card h3 {
+      position: relative;
+      z-index: 4;
+      color: #00ff99;
+      text-shadow: 2px 2px #000;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      padding: 10px;
+      width: 80%;
+      border: none;
+      border-radius: 8px;
+      background: #00ff99;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      position: relative;
+      z-index: 3;
+    }
+    .card button:hover {
+      background: #ff0055;
+      color: #fff;
+      box-shadow: 0 0 10px #ff0055;
+    }
+
+    #community {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #community h2 {
+      font-size: 5vw;
+      margin-bottom: 20px;
+      color: #00ff99;
+      text-shadow: 1px 1px #000;
+    }
+    #community p {
+      font-size: 3.5vw;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(17,17,17,0.85);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      nav a { font-size: 4vw; }
+      header { font-size: 8vw; }
+      #community h2 { font-size: 7vw; }
+      #community p { font-size: 4vw; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="top">🔥 JAMES LOGAN GAMING ZONE 🔥</header>
+
+<nav>
+  <a href="#top">Home</a>
+  <a href="#games">Games</a>
+  <a href="#community">Community</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="games" class="games">
+  <!-- Free Fire card -->
+  <div class="card">
+    <h3>Free Fire</h3>
+    <img src="https://www.kindpng.com/picc/m/713-7133865_logo-png-free-fire-imagens-1152-x-2048.png" alt="Free Fire Logo" class="logo">
+    <button onclick="window.open('https://ff.garena.com','_blank')">Play Now</button>
+  </div>
+
+  <!-- COD Mobile card with glowing soldier -->
+  <div class="card">
+    <h3>COD Mobile</h3>
+    <div class="glow"></div>
+    <img src="https://www.nicepng.com/png/detail/5-54361_soldier-png-cod-mw2-james-ramirez.png" alt="COD Soldier" class="soldier">
+    <button onclick="window.open('https://www.callofduty.com/mobile','_blank')">Play Now</button>
+  </div>
+</section>
+
+<section id="community">
+  <h2>Community</h2>
+  <p>Join our gaming community! Share tips and achievements with other players!</p>
+</section>
+
+<footer id="contact">
+  © 2026 James Logan Gaming Zone | Made on Phone 📱
+</footer>
+
+</body>
+</html>
